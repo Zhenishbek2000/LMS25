@@ -1,26 +1,26 @@
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Year;
+
 public class CarInfo {
-    private int yearOfIssue;
+    private Year year;
     private String model;
-    private long price;
+    private BigDecimal price;
     private String colour;
 
-    public CarInfo(int yearOfIssue, String model, long price, String colour) {
-        this.yearOfIssue = yearOfIssue;
+    public CarInfo(Year year, String model, BigDecimal price, String colour) {
+        this.year = year;
         this.model = model;
         this.price = price;
         this.colour = colour;
     }
 
-    public CarInfo() {
-
+    public Year getYear() {
+        return year;
     }
 
-    public int getYearOfIssue() {
-        return yearOfIssue;
-    }
-
-    public void setYearOfIssue(int yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
+    public void setYear(Year year) {
+        this.year = year;
     }
 
     public String getModel() {
@@ -31,11 +31,11 @@ public class CarInfo {
         this.model = model;
     }
 
-    public long getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -50,7 +50,7 @@ public class CarInfo {
     @Override
     public String toString() {
         return "CarInfo{" +
-                "yearOfIssue=" + yearOfIssue +
+                "year=" + year +
                 ", model='" + model + '\'' +
                 ", price=" + price +
                 ", colour='" + colour + '\'' +
